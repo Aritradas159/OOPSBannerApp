@@ -1,11 +1,12 @@
 /**
  * OOPSBannerApp
- * UC4: Improved OOPS banner using String array and loop
- * Circular O and clear S shape
+ * UC5: OOPS Banner using inline array initialization,
+ * String.join() and enhanced for-loop.
  * 
  * @author Aritra
- * @version 4.0
+ * @version 5.0
  */
+
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
@@ -53,6 +54,7 @@ public class OOPSBannerApp {
                 " ***** ",
                 "*      ",
                 " ***** ")
+
         };
 
         for (String line : banner) {
