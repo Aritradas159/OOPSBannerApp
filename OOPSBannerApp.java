@@ -1,64 +1,67 @@
 /**
  * OOPSBannerApp
- * UC5: OOPS Banner using inline array initialization,
- * String.join() and enhanced for-loop.
+ * UC6: Modular Banner using Helper Methods
+ * Uses static methods to generate patterns for O, P and S
  * 
  * @author Aritra
- * @version 5.0
+ * @version 6.0
  */
 
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String[] banner = {
+        String[] letterO = getO();
+        String[] letterP = getP();
+        String[] letterS = getS();
 
-            String.join("   ",
-                " ***** ",
-                " ***** ",
-                "****** ",
-                " ***** "),
-
-            String.join("   ",
-                "*     *",
-                "*     *",
-                "*     *",
-                "*     *"),
-
-            String.join("   ",
-                "*     *",
-                "*     *",
-                "****** ",
-                "*      "),
-
-            String.join("   ",
-                "*     *",
-                "*     *",
-                "*      ",
-                " ***** "),
-
-            String.join("   ",
-                "*     *",
-                "*     *",
-                "*      ",
-                "      *"),
-
-            String.join("   ",
-                "*     *",
-                "*     *",
-                "*      ",
-                "*     *"),
-
-            String.join("   ",
-                " ***** ",
-                " ***** ",
-                "*      ",
-                " ***** ")
-
-        };
-
-        for (String line : banner) {
-            System.out.println(line);
+        // O O P S
+        for (int i = 0; i < letterO.length; i++) {
+            System.out.println(
+                    letterO[i] + "   " +
+                    letterO[i] + "   " +
+                    letterP[i] + "   " +
+                    letterS[i]
+            );
         }
+    }
+
+    // Method to generate O pattern
+    public static String[] getO() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "
+        };
+    }
+
+    // Method to generate P pattern
+    public static String[] getP() {
+        return new String[]{
+                "****** ",
+                "*     *",
+                "*     *",
+                "****** ",
+                "*      ",
+                "*      ",
+                "*      "
+        };
+    }
+
+    // Method to generate S pattern
+    public static String[] getS() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*      ",
+                " ***** ",
+                "      *",
+                "*     *",
+                " ***** "
+        };
     }
 }
